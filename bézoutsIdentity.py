@@ -17,7 +17,7 @@ def euclideanGCD(a: int, b: int) -> tuple[list, list, int]:
 
 
 # Function to apply Bézout's algorithm and find the coefficients x, y, and GCD
-def bezoutsAlgorithm(a: int, b: int) -> tuple[int, int, int]:
+def bezoutsIdentity(a: int, b: int) -> tuple[int, int, int]:
     # Obtain the lists of quotients, remainders, and the GCD using Euclidean algorithm
     quotients, remainders, gcd = euclideanGCD(a, b)
 
@@ -37,7 +37,7 @@ def bezoutsAlgorithm(a: int, b: int) -> tuple[int, int, int]:
 num1 = int(input('Enter your first number: '))
 num2 = int(input('Enter your second number: '))
 
-# Call the Bezout's algorithm function with the input numbers
-x, y, gcd = bezoutsAlgorithm(num1, num2)
+# Call the Bézout's identity function with the input numbers
+x, y, gcd = bezoutsIdentity(num1, num2)
 
 print(f'\n{gcd} = {num1}({x}) + {num2}({y})')
